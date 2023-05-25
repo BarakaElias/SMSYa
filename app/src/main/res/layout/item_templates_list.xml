@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvw_template_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ContentTitles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Seasonal Greeting"/>
+
+    <TextView
+        android:id="@+id/tvw_template_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ContentSubtitles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvw_template_title"
+        android:text="Hello Dear user, we would like to wish you a very Merry Christmas and a Happy New Year! We would also like to ..."
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

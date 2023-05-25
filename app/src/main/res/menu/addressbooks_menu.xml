@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_addressbook_delete"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="@string/txt_delete"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_addressbook_edit"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="@string/txt_edit"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_addressbook_add"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="Add Contact"
+        app:showAsAction="ifRoom"/>
+
+</menu>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/txt_empty"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="courses.pluralsight.com.smsya.FirstFragment"
+        android:label="SmsYa"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_contactListsFragment"
+            app:destination="@id/contactListsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SMSFragment"
+            app:destination="@id/SMSFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_senderNamesFragment"
+            app:destination="@id/senderNamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="courses.pluralsight.com.smsya.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactListsFragment"
+        android:name="courses.pluralsight.com.smsya.ContactListsFragment"
+        android:label="@string/txt_address_books"
+        tools:layout="@layout/fragment_contact_lists">
+        <action
+            android:id="@+id/action_contactListsFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <action
+            android:id="@+id/action_contactListsFragment_to_editAddressbookFragment"
+            app:destination="@id/editAddressbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SMSFragment"
+        android:name="courses.pluralsight.com.smsya.SMSFragment"
+        android:label="@string/txt_empty"
+        tools:layout="@layout/fragment_s_m_s">
+        <action
+            android:id="@+id/action_SMSFragment_to_quicksmsFragment"
+            app:destination="@id/quicksmsFragment" />
+        <action
+            android:id="@+id/action_SMSFragment_to_smsTemplatesFragment"
+            app:destination="@id/smsTemplatesFragment" />
+        <action
+            android:id="@+id/action_SMSFragment_to_campaignFragment"
+            app:destination="@id/campaignFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quicksmsFragment"
+        android:name="courses.pluralsight.com.smsya.QuicksmsFragment"
+        android:label="@string/txt_quicksms_title"
+        tools:layout="@layout/fragment_quicksms" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="courses.pluralsight.com.smsya.ContactsFragment"
+        android:label="@string/txt_empty"
+        tools:layout="@layout/fragment_contacts">
+        <argument
+            android:name="addressBookId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_contactsFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_addContact"
+            app:destination="@id/addContact" />
+        <action
+            android:id="@+id/action_contactsFragment_to_editAddressbookFragment"
+            app:destination="@id/editAddressbookFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_contactListsFragment"
+            app:destination="@id/contactListsFragment"
+            app:popUpTo="@id/contactListsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="courses.pluralsight.com.smsya.ContactFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_editContactFragment"
+            app:destination="@id/editContactFragment" />
+        <action
+            android:id="@+id/action_contactFragment_to_addContact"
+            app:destination="@id/addContact" />
+    </fragment>
+    <dialog
+        android:id="@+id/addContact"
+        android:name="courses.pluralsight.com.smsya.AddContact"
+        android:label="fragment_add_contact"
+        tools:layout="@layout/fragment_add_contact" />
+    <dialog
+        android:id="@+id/editContactFragment"
+        android:name="courses.pluralsight.com.smsya.EditContactFragment"
+        android:label="fragment_edit_contact"
+        tools:layout="@layout/fragment_edit_contact" />
+    <dialog
+        android:id="@+id/editAddressbookFragment"
+        android:name="courses.pluralsight.com.smsya.EditAddressbookFragment"
+        android:label="fragment_edit_addressbook"
+        tools:layout="@layout/fragment_edit_addressbook" />
+    <fragment
+        android:id="@+id/senderNamesFragment"
+        android:name="courses.pluralsight.com.smsya.SenderNamesFragment"
+        android:label="@string/txt_sender_name"
+        tools:layout="@layout/fragment_sender_names">
+        <action
+            android:id="@+id/action_senderNamesFragment_to_requestSenderNameFragment"
+            app:destination="@id/requestSenderNameFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/requestSenderNameFragment"
+        android:name="courses.pluralsight.com.smsya.RequestSenderNameFragment"
+        android:label="fragment_request_sender_name"
+        tools:layout="@layout/fragment_request_sender_name" />
+    <fragment
+        android:id="@+id/smsTemplatesFragment"
+        android:name="courses.pluralsight.com.smsya.SmsTemplatesFragment"
+        android:label="@string/txt_sms_templates"
+        tools:layout="@layout/fragment_sms_templates">
+        <action
+            android:id="@+id/action_smsTemplatesFragment_to_templateFragment"
+            app:destination="@id/templateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/templateFragment"
+        android:name="courses.pluralsight.com.smsya.TemplateFragment"
+        android:label="fragment_template"
+        tools:layout="@layout/fragment_template" />
+    <fragment
+        android:id="@+id/campaignFragment"
+        android:name="courses.pluralsight.com.smsya.CampaignFragment"
+        android:label="@string/txt_campaign"
+        tools:layout="@layout/fragment_campaign" />
+</navigation>

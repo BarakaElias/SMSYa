@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CampaignFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/txt_send_message_to_people_in_a_contact_list"
+            style="@style/ContentSubtitles"
+            android:layout_marginTop="32dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_addressbook"
+            android:layout_marginTop="16dp"
+            style="@style/ContentTitles"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_sms_addressbook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/quicksmsTemplatesTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_sender_name"
+            android:layout_marginTop="32dp"
+            style="@style/ContentTitles"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_campaign_sender_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/quicksmsTextMessageTitle"
+            style="@style/ContentTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_text_message"
+             />
+
+        <EditText
+            android:id="@+id/edittext_campaign_text_message"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textview_bg"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="10dp"
+            android:singleLine="false"
+            />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_text_encoding"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+          >
+            <RadioButton
+                style="@style/ButtonRadios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/txt_text" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_unicode" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/ContentTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_schedule_date"
+          />
+
+        <TextView
+            android:id="@+id/edittext_campaign_schedule_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textview_bg"
+            android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+            android:padding="10dp"
+            android:text=""
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send_campaign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_send_campaign"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

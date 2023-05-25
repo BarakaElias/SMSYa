@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:fitsSystemWindows="true"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/ice_field"
+        app:expandedTitleMarginBottom="32dp"
+        app:expandedTitleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:expandedTitleTextColor="@color/white"
+        android:fadingEdge="vertical"
+        app:title="Default contacts"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default Contacts"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            style="@style/AppTitles"/>
+    </LinearLayout>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/defaultToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/Theme.SmsYa.PopupOverlay" />
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+</com.google.android.material.appbar.AppBarLayout>

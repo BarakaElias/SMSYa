@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTitles">
+        <item name="android:textColor">@color/ice_field</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="AppSubtitles">
+        <item name="android:textColor">@color/some_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="ContentTitles">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="ContentSubtitles">
+        <item name="android:textColor">@color/some_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BigTitles">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontWeight">800</item>
+    </style>
+    <style name="DefaultButtons">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/ice_field</item>
+<!--        <item name="strokeColor">@color/some_grey</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="FlatButtons" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/ice_field</item>
+        <item name="android:capitalize">none</item>
+    </style>
+
+    <style name="MultiLineField">
+        <item name="backgroundColor">@color/some_grey</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="ButtonRadios">
+        <item name="buttonTint">@color/ice_field</item>
+    </style>
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+</resources>
