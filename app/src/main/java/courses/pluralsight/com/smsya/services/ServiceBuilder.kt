@@ -20,8 +20,8 @@ class BasicAuthInterceptor(username: String, password: String): Interceptor {
     }
 }
 object ServiceBuilder {
-    private val username : String = "3f995b9eff643b85"
-    private val password : String = "MzVlNGEyMWFjZjE4ZmM3NGQ3ODg0YzdhZjJlZDAyZTVhOWQ1NjAyMjBkNTZiNmNmMDE1OTg4NGVhZjI1NWIyZA=="
+    private val username : String = "basic auth username"
+    private val password : String = "basic auth password"
 
     val auth = "Basic "+ Base64.getEncoder().encodeToString(("${username}:${password}").toByteArray())
 
