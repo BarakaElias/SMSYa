@@ -1,10 +1,5 @@
 #Bulk SMS App
-This Android application is built using Kotlin and is designed 
-to efficiently send messages in bulk using a Bulk SMS API. 
-The app simplifies the process of managing contact lists, 
-creating message templates, sending single SMS, organizing 
-SMS campaigns, and checking the SMS balance - all within 
-an intuitive and user-friendly interface.
+This Android application is built using Kotlin and is designed to efficiently send messages in bulk using a Bulk SMS API. The app simplifies the process of managing contact lists, creating message templates, sending single SMS, organizing SMS campaigns, and checking the SMS balance - all within an intuitive and user-friendly interface.
 
 ##Features
 **Contact List management**
